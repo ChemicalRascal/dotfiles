@@ -3,4 +3,5 @@ vim-dispatch
 vim-fugitive
 vim-repeat
 vim-sneak
+vim-surround
 vim-unimpaired
