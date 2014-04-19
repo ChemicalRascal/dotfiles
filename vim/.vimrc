@@ -24,6 +24,7 @@ set history=50			" keep 50 lines of command line history
 set ruler			" show the cursor position all the time
 set showcmd			" display incomplete commands
 set incsearch			" do incremental searching
+set tildeop			" Make ~ work as an operator
 
 filetype plugin indent on	" Filetype plugins, ident rules
 
