@@ -45,19 +45,25 @@ endif
 " November, 2007, in a thread titled "a project-local spell file?"
 "
 " Obviously, many thanks to Matt.
+
 au BufNewFile,BufRead * call SetupDictionary(expand("<afile>"))
 function! SetupDictionary(file)
+  " TODO: Make LANGS, PREFIXES be defined outside the function.
+  " TODO: Consider dropping PREFIXES, and instead looking in the current dir
+  " 	  for anything that matches the regex: "(\.?.+\.)?" . lang . "\.add"
   let LANGS = ["", "en", "en.utf-8"]
   let PREFIXES = ["", "spell", ".spell", "spellfile", ".spellfile"]
 
   " Get path to dir of given file, expanding out "~", "$HOME", and such.
-  let file = fnamemodify(expand(a:file), ':p:h')
+  " ":h" modifier lops off the final path delimiter, so we need to add that
+  " back.
+  let file = fnamemodify(expand(a:file), ':p:h') . '/'
 
   " Split path on file delimiter, but keep it on the end of each entry (hence the 
   " use of \zs), then rejoin them "incrementally".
-  " Ergo: "/my/foobar/path"
-  "   -> ["/", "my/", "foobar/", "path"]
-  "   -> ["/", "/my/", "/my/foobar/", "/my/foobar/path"]
+  " Ergo: "/my/foobar/path/"
+  "    -> ["/", "my/", "foobar/", "path/"]
+  "    -> ["/", "/my/", "/my/foobar/", "/my/foobar/path/"]
   let DIRS = split(file, '/\zs')
   for i in range(1, len(DIRS)-1)
     let DIRS[i] = DIRS[i-1] . DIRS[i]
