@@ -1,4 +1,4 @@
-" Use Vim settings, rather than Vi settings (much better!).
+" We don't need no stinkin' compatibility.
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
@@ -18,23 +18,27 @@ call pathogen#infect()
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-set backspace=indent,eol,start	" allow backspacing over everything in insert mode
-set backup			" keep a backup file
-set history=50			" keep 50 lines of command line history
-set ruler			" show the cursor position all the time
-set showcmd			" display incomplete commands
-set incsearch			" do incremental searching
-set tildeop			" Make ~ work as an operator
+set backspace=indent,eol,start  " backspace over everything in insert mode
+set backup                      " keep a backup file
+set history=50                  " keep 50 lines of command line history
+set ruler                       " show the cursor position all the time
+set showcmd                     " display incomplete commands
+set incsearch                   " do incremental searching
+set tildeop                     " Make ~ work as an operator
 
-filetype plugin indent on	" Filetype plugins, ident rules
+filetype plugin indent on       " Filetype plugins, ident rules
+
+" -- DICTONARY SETTINGS ---
 
 " Set custom dictionary.
 if has("spell")
   set spellfile=~/.vim/spellfile.add
 endif
 
-" F8 - Gundo mapping.
-nnoremap <F8> :GundoToggle<CR>
+" --- MAPPINGS ---
+
+" F5 - Gundo mapping.
+nnoremap <F5> :GundoToggle<CR>
 
 " F10 - Remove trailing whitespace.
 nnoremap <F10> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
@@ -49,5 +53,5 @@ function! NumberToggle()
     set norelativenumber
     set nonumber
   endif
-endfunc
+endfunction
 nnoremap <C-n> :call NumberToggle()<cr>
