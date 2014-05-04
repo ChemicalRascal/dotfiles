@@ -2,6 +2,9 @@
 export EDITOR="vim"
 export RSYNC_PARTIAL_DIR=".rsync-tmp"
 
+# wiki-search-html variable.
+export wiki_browser=$(which firefox)
+
 # Aliases, functions, keybindings.
 # System-wide stuff.
 source ~/.aliases/gen
