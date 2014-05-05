@@ -1,6 +1,13 @@
 " We don't need no stinkin' compatibility.
-" This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" Pathogen.
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+" What this does is tell pathogen to go to the default pathogen folder
+" (~/.vim/bundle) and do it's pathogen miracle magic stuff.
+call pathogen#infect()
+" Also help tags.
+call pathogen#helptags()
 
 " Syntax/colour/highlighting
 syntax enable
@@ -9,14 +16,6 @@ set hlsearch
 
 " Overwrite SpellLocal highlighting to something unobtrusive.
 hi SpellLocal term=underline ctermbg=8 gui=undercurl guisp=Black
-
-" Call pathogen.
-" What this does is tell pathogen to go to the default pathogen folder
-" (~/.vim/bundle) and do it's pathogen miracle magic stuff.
-call pathogen#infect()
-" Now get pathogen to re-do the helptags, runtime path.
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 set backspace=indent,eol,start  " backspace over everything in insert mode
 set backup                      " keep a backup file
