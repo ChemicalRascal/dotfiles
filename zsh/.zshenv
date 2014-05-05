@@ -18,6 +18,6 @@ alias info='info --vi-keys'
 # Random (legible) characters on terminal function.
 # First argument specifies period (default: 0.5 seconds.)
 char_spam() {
-	clear;
-	strings /dev/urandom | while read i; do echo -n "$i"; sleep "${1:=0.5}"; done
+  clear;
+  strings /dev/urandom | while read i; do echo -n "$i"; sleep "${1:=0.5}"; done
 }
