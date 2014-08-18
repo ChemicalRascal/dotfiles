@@ -13,7 +13,7 @@ compinit
 promptinit
 # End of lines added by compinstall
 # Prompt theme
-prompt adam2 8bit
+prompt adam2 8bit cyan green green white
 
 # ----
 # Aliases moved to .zshenv.
