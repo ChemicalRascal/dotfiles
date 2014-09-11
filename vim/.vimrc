@@ -105,6 +105,12 @@ endfunction
 
 " --- MAPPINGS ---
 
+" UltiSnips mappings.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
 " F5 - Gundo mapping.
 nnoremap <F5> :GundoToggle<CR>
 
