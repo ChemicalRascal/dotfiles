@@ -18,6 +18,7 @@ set hlsearch
 hi SpellLocal term=underline ctermbg=8 gui=undercurl guisp=Black
 
 set backspace=indent,eol,start  " backspace over everything in insert mode
+set nojoinspaces                " autoformat: no double space after periods
 set backup                      " keep a backup file
 set history=50                  " keep 50 lines of command line history
 set ruler                       " show the cursor position all the time
