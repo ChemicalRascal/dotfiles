@@ -96,8 +96,8 @@ function! SetupDictionary(file)
         let potential = prefix . potential
 
         if filereadable(dir . potential)
-          exe "setlocal spellfile-=" . dir . potential
-          exe "setlocal spellfile^=" . dir . potential
+          exe "setlocal spellfile-=" . fnameescape(dir . potential)
+          exe "setlocal spellfile^=" . fnameescape(dir . potential)
         endif
       endfor
     endfor
