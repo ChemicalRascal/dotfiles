@@ -107,19 +107,19 @@ endfunction
 " --- YCM, ULTISNIPS ---
 
 " UltiSnips style settings
-let g:ultisnips_java_brace_style="nl"
+"let g:ultisnips_java_brace_style="nl"
 
 " --- MAPPINGS ---
 
 " Handle YCM-UltiSnips clash
 " Source: Alexey Shmalko
 " http://www.alexeyshmalko.com/2014/youcompleteme-ultimate-autocomplete-plugin-for-vim/
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+"let g:ycm_key_list_select_completion=[]
+"let g:ycm_key_list_previous_completion=[]
 
 " SHIFT-TAB - UltiSnips list snippets
 " NB: Needed because <C-TAB> isn't passed on by terminal emulators.
-let g:UltiSnipsListSnippets="<s-tab>"
+"let g:UltiSnipsListSnippets="<s-tab>"
 
 " F5 - Gundo mapping.
 nnoremap <F5> :GundoToggle<CR>
