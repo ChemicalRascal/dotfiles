@@ -18,6 +18,9 @@ setxkbmap -option "compose: ralt"
 #Handle default mouse cursor in X.
 xsetroot -cursor_name left_ptr
 
+#Hide the mouse cursor when it isn't being used.
+unclutter &
+
 #Handle systray
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
   --expand true --width 5 --height 12 --transparent true --tint 0x000000 &
