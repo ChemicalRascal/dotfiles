@@ -1,0 +1,127 @@
+!! urxvt settings.
+
+!Globals
+URxvt.scrollBar:	false
+URxvt.loginShell:	true
+URxvt*secondaryScroll:	true
+URxvt*saveLines:	65535
+URxvt*urgentOnBell:	true
+URxvt*internalBorder:	3
+URxvt*externalBorder:	0
+URxvt*depth:		32
+URxvt*termName:		rxvt-256color
+URxvt*iso14755:		false
+URxvt*iso14755_52:	false
+
+!URxvt*.transparent:	true
+!URxvt*.shading:		110
+
+!Tewi font
+URxvt*font:             xft:Tewi:pixelsize=11:antialias=false
+URxvt*boldFont:         xft:Tewi:pixelsize=11:antialias=false
+
+!Terminal sizes
+LongTerm*geometry:	80x64
+WideTerm*geometry:	105x24
+FillTerm*geometry:	131x64
+VimTerm*geometry:	86x64
+HugeTerm*geometry:	172x64
+
+! --- Custom colour scheme -----------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+URxvt*background: #111105
+URxvt*foreground: #f0f0fc
+
+! --- standard colors ---
+
+! black
+URxvt*color0: #333333
+
+! bright_black
+URxvt*color8: #424242
+
+! red
+URxvt*color1: #dc683d
+
+! bright_red
+URxvt*color9: #e3a378
+
+! green
+URxvt*color2: #67dd3d
+
+! bright_green
+URxvt*color10: #a3e478
+
+! yellow
+URxvt*color3: #dcdd3d
+
+! bright_yellow
+URxvt*color11: #e3e478
+
+! blue
+URxvt*color4: #6768b2
+
+! bright_blue
+URxvt*color12: #a3a3b9
+
+! magenta
+URxvt*color5: #dc68b2
+
+! bright_magenta
+URxvt*color13: #e3a3b9
+
+! cyan
+URxvt*color6: #67ddb2
+
+! bright_cyan
+URxvt*color14: #a3e4b9
+
+! white
+URxvt*color7: #e9e9e9
+
+! bright_white
+URxvt*color15: #f6f6f6
+
+! --- xterm stuff ---
+XTerm*background: #111105
+XTerm*foreground: #f0f0fc
+! --- standard colors ---
+! black
+XTerm*color0: #333333
+! bright_black
+XTerm*color8: #424242
+! red
+XTerm*color1: #dc683d
+! bright_red
+XTerm*color9: #e3a378
+! green
+XTerm*color2: #67dd3d
+! bright_green
+XTerm*color10: #a3e478
+! yellow
+XTerm*color3: #dcdd3d
+! bright_yellow
+XTerm*color11: #e3e478
+! blue
+XTerm*color4: #6768b2
+! bright_blue
+XTerm*color12: #a3a3b9
+! magenta
+XTerm*color5: #dc68b2
+! bright_magenta
+XTerm*color13: #e3a3b9
+! cyan
+XTerm*color6: #67ddb2
+! bright_cyan
+XTerm*color14: #a3e4b9
+! white
+XTerm*color7: #e9e9e9
+! bright_white
+XTerm*color15: #f6f6f6
