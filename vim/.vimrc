@@ -1,14 +1,6 @@
 " We don't need no stinkin' compatibility.
 set nocompatible
 
-" Pathogen.
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-" What this does is tell pathogen to go to the default pathogen folder
-" (~/.vim/bundle) and do it's pathogen miracle magic stuff.
-call pathogen#infect()
-" Also help tags.
-call pathogen#helptags()
-
 " Syntax/colour/highlighting
 syntax enable
 set background=dark
