@@ -1,0 +1,16 @@
+[user]
+	name = James Denholm
+	email = nod.helm@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[alias]
+	lg = log --graph --pretty=format:'%Cgreen%h%Creset -%Creset %s%C(yellow)%d %Cblue(%aN, %cr)%Creset' --abbrev-commit --date=relative --decorate
+	hier = log --all --graph --decorate --oneline --simplify-by-decoration
+	branches = branch -v
+	ctags = !.git/hooks/ctags
+[push]
+	default = simple
+[init]
+	templatedir = ~/.git_template
