@@ -1,0 +1,10 @@
+# ~/.aliases/terminals of jdenholm on pvtjoker
+#
+# A file for launching specific terminals.
+
+# Terminal sizes.
+alias lurxvt='urxvt -name LongTerm'
+alias wurxvt='urxvt -name WideTerm'
+alias furxvt='urxvt -name FillTerm'
+alias hurxvt='urxvt -name HugeTerm'
+alias vurxvt='urxvt -name VimTerm'

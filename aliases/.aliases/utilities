@@ -1,0 +1,11 @@
+# ~/.aliases/utilities of jdenholm on pvtjoker
+#
+# A file for altering the system state, or often-used (but complex) commands.
+
+# Simplifed commands due to high-frequency usage
+alias tage='tagebuch -a +'
+alias rotwall='awsetbg -a -r /home/jdenholm/Pictures/WallRotate/'
+alias frist_list='frist -C "fd db +2W"'
+
+# Combining pdf documents with gs
+gs_combine() {gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOUTPUTFILE=$1 $2 $3}

@@ -1,0 +1,20 @@
+# ~/.aliases/gen of jdenholm on pvtjoker
+#
+# A file to pull together all the "general" aliases.
+
+# Terminals
+source ~/.aliases/terminals
+
+# System alteration
+source ~/.aliases/utilities
+
+# Alarm system
+source ~/.aliases/alarm
+
+# Browser shortcuts
+source ~/.aliases/browsers
+
+# Wine aliases.
+alias wineSubRosa="cd ~/.wine/drive_c/Program\ Files\ \(x86\)/subrosa07b; wine subrosa.exe"
+alias wineSMAC="cd ~/.wine/drive_c/GOG\ Games/Sid\ Meier\'s\ Alpha\ Centauri; wine terran.exe"
+alias wineSMAX="cd ~/.wine/drive_c/GOG\ Games/Sid\ Meier\'s\ Alpha\ Centauri; wine terranx.exe"

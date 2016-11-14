@@ -1,0 +1,7 @@
+# ~/.aliases/alarm of jdenholm on pvtjoker
+#
+# A file relating to the alarm system.
+
+# Alarm kill/snooze alias.
+alias alarmkill="mpc -q stop"
+alias alarmsnooze="mpc -q stop; sleep 540; mpcalarm"

@@ -1,0 +1,8 @@
+# ~/.aliases/alarm of jdenholm on pvtjoker
+#
+# A file relating to launching firefox/chromium with particular arguments
+
+#Code documentation
+alias fire-py3='firefox -new-tab "/home/jdenholm/Documents/Topics/Software Development/python3doc/index.html"'
+alias fire-py2='firefox -new-tab "/home/jdenholm/Documents/Topics/Software Development/python2doc/index.html"'
+alias fire-ticpp1='firefox -new-tab "/home/jdenholm/Documents/Topics/Software Development/Thinking In C++/TICPP 2nd Ed Volume One/html/Frames.html"'
