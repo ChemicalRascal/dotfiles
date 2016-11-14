@@ -1,8 +1,11 @@
-gundo
+gundo.vim
+vim-abolish
+vim-bundler
 vim-dispatch
 vim-fugitive
+vim-pathogen
+vim-rails
 vim-repeat
-vim-sneak
+vim-snippets
 vim-surround
 vim-unimpaired
-vim-vinegar
