@@ -98,13 +98,18 @@ endfunction
 
 " --- MAPPINGS ---
 
-" F5 - Gundo mapping.
+" Tag-opening mappings, by Amjith:
+" http://stackoverflow.com/a/563992
+" CTRL + \ - Open tag in a new tab
+noremap <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" F5       - Gundo mapping.
 nnoremap <F5> :GundoToggle<CR>
 
-" F10 - Remove trailing whitespace.
+" F10      - Remove trailing whitespace.
 nnoremap <F10> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" CTRL-N - Cycle number lines.
+" CTRL-N   - Cycle number lines.
 function! NumberToggle()
   if(&number == 0 && &relativenumber == 0)
     set number
