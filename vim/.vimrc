@@ -110,7 +110,12 @@ function F_Cscbuild()
   " TODO: Consider making this more intelligent -- like fugitive's handling
   " of ctags' `tags` file. Maybe use .git to "hide" cscope files similarly?
   !cscope -Rbq
-  " (Re)add cscope database.
+  " Resetting and *then* adding will mean that, if the database wasn't
+  " previously in vim, it won't have to add the database twice. (But, of
+  " course, if it was, it won't be added again.)
+  " Reset cscope database.
+  cscope reset
+  " (Re-)add cscope database.
   cscope add .
 endfunction
 command Cscbuild exec F_Cscbuild()
