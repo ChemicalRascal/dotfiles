@@ -22,6 +22,9 @@ set splitright                  " Split right, as is sensible.
 
 filetype plugin indent on       " Filetype plugins, ident rules
 
+" Sane cscope quickfix settings
+:set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+
 " -- DICTONARY SETTINGS ---
 
 " Set standard dictionary, or dictionaries. Will be at end of final list, in
@@ -98,7 +101,33 @@ function! SetupDictionary(file)
   endfor
 endfunction
 
+" --- COMMANDS ---
+
+" Cscbuild: Calls cscope to build cscope database in current dir,
+" and adds it to vim.
+function F_Cscbuild()
+  " (Re)build cscope files
+  " TODO: Consider making this more intelligent -- like fugitive's handling
+  " of ctags' `tags` file. Maybe use .git to "hide" cscope files similarly?
+  !cscope -Rbq
+  " (Re)add cscope database.
+  cscope add .
+endfunction
+command Cscbuild exec F_Cscbuild()
+
 " --- MAPPINGS ---
+
+" cscope scheme, from if_cscop.txt
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>a :cs find a <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>b :Cscbuild<CR><CR>
 
 " Tag-opening mappings, by Amjith:
 " http://stackoverflow.com/a/563992
