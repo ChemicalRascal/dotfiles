@@ -1,6 +1,7 @@
 # Environment variables.
 export EDITOR="vim"
 export RSYNC_PARTIAL_DIR=".rsync-tmp"
+export QUOTING_STYLE="literal"
 
 # wiki-search-html variable.
 export wiki_browser=$(which firefox)
