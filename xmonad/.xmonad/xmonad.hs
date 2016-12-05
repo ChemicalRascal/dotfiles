@@ -5,6 +5,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.Script
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Layout.Spacing
 import XMonad.Layout.PerWorkspace
@@ -16,19 +17,20 @@ import qualified Data.Map as Map
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/jdenholm/.xmobarrc"
     xmonad $ defaultConfig
-        { manageHook = manageDocks <+> manageHook defaultConfig
-        , layoutHook = avoidStruts  $
+        { manageHook  = manageDocks <+> manageHook defaultConfig
+        , layoutHook  = avoidStruts  $
                        -- XMonad.Layout.Reflect methods
                        mkToggle (single REFLECTX) $
                        mkToggle (single REFLECTY) $
                        layoutHook defaultConfig
-        , logHook    = dynamicLogWithPP xmobarPP
+        , logHook     = dynamicLogWithPP xmobarPP
             { ppOutput = hPutStrLn xmproc
             , ppTitle  = xmobarColor "green" "" . shorten 200
             }
-        , modMask    = mod4Mask     -- Remap mod to super
-        , terminal   = "urxvt"      -- Use urxvt instead of xterm
-        , keys       = myKeys <+> keys defaultConfig
+        , startupHook = execScriptHook "startup"
+        , modMask     = mod4Mask     -- Remap mod to super
+        , terminal    = "urxvt"      -- Use urxvt instead of xterm
+        , keys        = myKeys <+> keys defaultConfig
         }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = Map.fromList $

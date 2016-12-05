@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+case $1 in
+  startup)
+    #Set the screen appropriately.
+    if ( xrandr | grep VGA1 ) > /dev/null; then
+      ~/.screenlayout/home.sh
+      xset s off -dpms
+    fi
+    ;;
+esac
