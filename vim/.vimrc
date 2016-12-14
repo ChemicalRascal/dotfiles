@@ -19,6 +19,7 @@ set incsearch                   " do incremental searching
 set tildeop                     " Make ~ work as an operator
 set splitbelow                  " Split below, as is sensible.
 set splitright                  " Split right, as is sensible.
+set updatetime=250              " Speed up updates, as is sensible.
 
 filetype plugin indent on       " Filetype plugins, ident rules
 
