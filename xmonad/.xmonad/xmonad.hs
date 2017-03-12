@@ -31,6 +31,7 @@ main = do
         , modMask     = mod4Mask     -- Remap mod to super
         , terminal    = "urxvt"      -- Use urxvt instead of xterm
         , keys        = myKeys <+> keys defaultConfig
+        , focusFollowsMouse = False
         }
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = Map.fromList $
