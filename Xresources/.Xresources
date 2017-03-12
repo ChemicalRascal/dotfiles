@@ -17,8 +17,8 @@ URxvt*iso14755_52:	false
 !URxvt*.shading:		110
 
 !Tewi font
-URxvt*font:             xft:Tewi:pixelsize=11:antialias=false
-URxvt*boldFont:         xft:Tewi:pixelsize=11:antialias=false
+URxvt*font:             xft:lucy tewi:pixelsize=11:antialias=false
+URxvt*boldFont:         xft:lucy tewi:pixelsize=11:antialias=false
 
 !Terminal sizes
 LongTerm*geometry:	80x64
