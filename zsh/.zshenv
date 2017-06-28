@@ -32,8 +32,10 @@ char_spam() {
   strings /dev/urandom | while read i; do echo -n "$i"; sleep "${1:=0.5}"; done
 }
 
+servers=("d56c06d08312ff1bc4d1965a870e95e7" "09fdca3e7825007813820dfd9436f5bb")
+
 # If we're on a particular server, change PATHs.
-if [[ $(echo $HOSTNAME | md5sum | cut -f1 -d' ') == d56c06d08312ff1bc4d1965a870e95e7 ]]; then
+if [[ ${servers[(I)$(echo $HOSTNAME | md5sum | cut -f1 -d' ')]} ]]; then
   export PATH=$HOME/bin:$PATH
   export LIBRARY_PATH=$HOME/homeroot/usr/local/lib
   export LD_LIBRARY_PATH=$HOME/homeroot/usr/local/lib
