@@ -40,4 +40,5 @@ if [[ ${servers[(I)$(echo $HOSTNAME | md5sum | cut -f1 -d' ')]} ]]; then
   export LIBRARY_PATH=$HOME/homeroot/usr/local/lib
   export LD_LIBRARY_PATH=$HOME/homeroot/usr/local/lib
   export C_INCLUDE_PATH=$HOME/homeroot/usr/local/include
+  export CPLUS_INCLUDE_PATH=$HOME/homeroot/usr/local/include
 fi
