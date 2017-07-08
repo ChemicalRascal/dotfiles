@@ -10,6 +10,7 @@
 	hier = log --all --graph --decorate --oneline --simplify-by-decoration
 	branches = branch -v
 	ctags = !.git/hooks/ctags
+	moddiff = !"git status | awk '/modified:   / { print $2 }' | xargs -d '\n' -I {} sh -c 'git diff --color=always {} | less -r'"
 [push]
 	default = simple
 [init]
