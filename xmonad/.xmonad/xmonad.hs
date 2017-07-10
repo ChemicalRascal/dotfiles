@@ -16,7 +16,7 @@ import qualified Data.Map as Map
 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/jdenholm/.xmobarrc"
-    xmonad $ defaultConfig
+    xmonad $ docks $ defaultConfig
         { manageHook  = manageDocks <+> manageHook defaultConfig
         , layoutHook  = avoidStruts  $
                        -- XMonad.Layout.Reflect methods

@@ -1,2 +1,4 @@
 Config { position = TopW L 95
+       , allDesktops = True
+       , overrideRedirect = True
        }
