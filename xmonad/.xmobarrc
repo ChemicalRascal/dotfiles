@@ -1,4 +1,5 @@
-Config { position = TopW L 95
+Config { -- position = TopW L 100
+	 position = Static { xpos = 0, ypos = 0, width = 1920, height = 16 }
        , allDesktops = True
        , overrideRedirect = True
        }

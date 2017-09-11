@@ -25,7 +25,7 @@ main = do
                        layoutHook defaultConfig
         , logHook     = dynamicLogWithPP xmobarPP
             { ppOutput = hPutStrLn xmproc
-            , ppTitle  = xmobarColor "green" "" . shorten 200
+            , ppTitle  = xmobarColor "green" "" -- . shorten 200
             }
         , startupHook = execScriptHook "startup"
         , modMask     = mod4Mask     -- Remap mod to super
@@ -36,4 +36,5 @@ main = do
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = Map.fromList $
     [ (( modm, xK_x), sendMessage $ Toggle REFLECTX)
+    , (( modm, xK_y), sendMessage $ Toggle REFLECTY)
     ]

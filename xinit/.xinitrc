@@ -22,8 +22,8 @@ xsetroot -cursor_name left_ptr
 unclutter &
 
 #Handle systray
-trayer --edge top --align right --SetDockType true --SetPartialStrut true \
-  --expand true --width 5 --height 12 --transparent true --tint 0x000000 &
+#trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+#  --expand true --width 5 --height 12 --transparent true --tint 0x000000 &
 
 #Handle java not being terrible
 export _JAVA_AWT_WM_NONREPARENTING=1
