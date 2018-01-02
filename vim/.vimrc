@@ -21,6 +21,8 @@ set splitbelow                  " Split below, as is sensible.
 set splitright                  " Split right, as is sensible.
 set updatetime=125              " Speed up updates, as is sensible.
 
+let g:gitgutter_realtime=1
+
 filetype plugin indent on       " Filetype plugins, ident rules
 
 " Sane cscope quickfix settings
